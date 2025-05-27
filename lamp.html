@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>總花費</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white;
+    }
+    .cost-label {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .cost-display {
+      font-size: 28px;
+    }
+    .button-container {
+      margin-top: 200px;
+    }
+    .continue-button {
+        background: #ffdeea;
+        background: radial-gradient(circle, rgba(255, 222, 234, 1) 100%, rgba(148, 187, 233, 1) 100%);;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: 1px solid black;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .continue-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="cost-label">您的總花費</div>
+  <div class="cost-display">💰：元</div>
+
+  <div class="button-container">
+    <a href="fans.html" class="continue-button">來看看更多粉絲們的故事吧！</a>
+  </div>
+</body>
+</html>

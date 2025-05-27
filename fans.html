@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>粉絲故事</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+    .story-block {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 80px;
+    }
+    .story-block.reverse {
+      flex-direction: row-reverse;
+    }
+    .avatar {
+      width: 200px;
+      text-align: center;
+    }
+    .avatar img {
+      width: 200px;
+      height: auto;
+    }
+    .avatar p {
+      margin-top: 8px;
+      font-size: 18px;
+      color: #333;
+    }
+    .speech-bubble {
+      background-color: #FFDEEA;
+      padding: 30px;
+      border-radius: 20px;
+      position: relative;
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+    .speech-bubble::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    .story-block .speech-bubble::after {
+      left: -20px;
+      top: 20px;
+      border-width: 20px 20px 20px 0;
+      border-color: transparent #FFDEEA transparent transparent;
+    }
+    .story-block.reverse .speech-bubble::after {
+      right: -20px;
+      top: 20px;
+      border-width: 20px 0 20px 20px;
+      border-color: transparent transparent transparent #FFDEEA;
+      left: auto;
+    }
+    .continue-button {
+      background-color: #e0e0e0;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 12px 32px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-block;
+      text-align: center;
+    }
+    .continue-button:hover,
+    .continue-button:active {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="story-block">
+    <div class="avatar">
+      <img src="/Users/yuanhsichou/Desktop/project/粉絲6.png" alt="Abby">
+      <p>Abby（化名）</p>
+    </div>
+    <div class="speech-bubble" style="margin-top: -20px;">
+        從首爾回美國待不到兩天又飛首爾，連續兩次。一年飛了七十多個航班，雖然很累，但見到我喜歡的偶像就感到很幸福，他知道我為了追他很累，所以（偶像）也會加倍關心我。
+        這樣做是因為我想跟喜歡的人見面，喜歡看他在舞台上閃閃發光的樣子，想跟他說話，每次（見到面）都很幸福，他沒有讓我失望過。        
+    </div>
+  </div>
+
+  <div class="story-block reverse">
+    <div class="avatar">
+      <img src="/Users/yuanhsichou/Desktop/project/粉絲1.png" alt="Jennie">
+      <p>Jennie（化名）</p>
+    </div>
+    <div class="speech-bubble">
+        目前來看，最瘋狂大概是飛去美國陪他們巡吧，之後搞不好會有更瘋狂的，我也不知道。當時只是因為我大概跟他們有分離焦慮症，我想到可能連續三個月看不到我擔，我就覺得我快要窒息了，每天都非常焦躁，為了解決這個不安，就決定去了。去完回來就好非常多。回頭看的話，會覺得雖然蠻瘋的，但整個過程我大概會記得一輩子，是人生裡面很好的一段歷程吧，在最好的時間、最好的地方，發生了最好的事，然後成為了美好的回憶。
+
+    </div>
+  </div>
+  <div class="story-block">
+    <div class="avatar">
+      <img src="/Users/yuanhsichou/Desktop/project/粉絲5.png" alt="Aerin">
+      <p>Aerin（化名）</p>
+    </div>
+    <div class="speech-bubble" style="margin-top: -40px;">
+        我在近期的回歸上花了近新台幣200萬元，其中與偶像的單獨合照花到13萬元，兩次回歸花了近400萬元。我對卡沒什麼興趣，我只對他們人有興趣 我喜歡能1對1的場，目前參加簽售會的次數已經多到跟偶像如朋友般自然。
+    </div>
+  </div>
+
+  <div class="story-block reverse">
+    <div class="avatar">
+      <img src="/Users/yuanhsichou/Desktop/project/粉絲3.png" alt="Sun">
+      <p>Sun（化名）</p>
+    </div>
+    <div class="speech-bubble">
+        剛開始他還是一名需要粉絲的練習生，而我給了他所需要的支持、他給予我對生活的滿滿動力。透過他的眼裡，我看見了豐富多采的世界，看見他次次逆境中開出燦爛的花，如果他幸福的話我會比他先流淚，這樣愛一個人的情緒我想只有追星可以帶給我。
+        因為自己追的是練習生而有銷量壓力買很多，每次都會盡自己最大的努力購買，但從下單到真正拿到商品，需要經歷近四個月的等待，而真正感到開心的，只有拆開包裹的那一刻，但也因為一直都有控制在自己能力範圍，所以說買了也不會後悔，就是有時候會因為一堆周邊佔空間而感到苦惱。        
+    </div>
+  </div>
+</body>
+</html>
+  <div class="story-block">
+    <div class="avatar">
+      <img src="/Users/yuanhsichou/Desktop/project/粉絲4.png" alt="邱比">
+      <p>邱比（化名）</p>
+    </div>
+    <div class="speech-bubble" style="margin-top: -20px;">
+        老實說我當時也不太敢細算自己到底花了多少錢，因為應該會蠻驚人的。但那段時間很常滑臉書社團，每天放學拿到手機後，第一個打開的不是 IG，而是社團，少則滑一兩小時，多的時候甚至會滑三個小時，一直在看卡價、刷貼文、跟單、找代購。那段時間其實是精神跟金錢的雙重消耗，但當時真的就是一股腦地想要「集齊全套」和「想要漂亮的小卡」的執念在支撐。現在回頭看會覺得那種心態真的太瘋，但也算是一段特別的經歷。    </div>
+  </div>
+  <div style="text-align: center; margin-bottom: 60px;">
+    <a href="text.html" style="text-decoration: none; color: inherit;">
+      <button class="continue-button">繼續閱讀</button>
+    </a>
+  </div>
+</html>

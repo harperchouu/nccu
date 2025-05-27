@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>捲動式影片展示</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: #f9f9f9;
+    }
+    #plefk {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+    #popup-overlay button {
+      font-size: 18px;
+      padding: 10px 22px;
+      margin: 0 10px;
+      min-width: 70px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- 捲動式影片：FB -->
+  <div id="ibfdl">
+    <script>
+      (function() {
+        var namespace = '@story-telling-reporter/react-embed-code-generator@2.2.13';
+        var pkg = 'scrollable-video';
+        if (typeof window != 'undefined') {
+          if (!window.hasOwnProperty(namespace)) {
+            window[namespace] = {};
+          }
+          if (window[namespace] && !window[namespace].hasOwnProperty(pkg)) {
+            window[namespace][pkg] = [];
+          }
+          if (Array.isArray(window[namespace][pkg])) {
+            var data = {
+              "video": {
+                "src": "https://harperchouu.github.io/vediodemo/final%202.mov",
+                "mobileSrc": "",
+                "duration": 11.421667
+              },
+              "captions": [
+                {
+                  "id": "ppcpo",
+                  "width": "narrow",
+                  "alignment": "left",
+                  "startTime": 1,
+                  "rawContentState": {
+                    "blocks": [
+                      {
+                        "key": "2us0o",
+                        "data": {},
+                        "text": "臉書有許多演唱會門票交易社團，其中包括原價轉售票券的消費者、黃牛票販賣者等，通常標註「非原價」、「有預算再私訊」等字詞的貼文表示對方為高價售票的黃牛。",
+                        "type": "unstyled",
+                        "depth": 0,
+                        "entityRanges": [],
+                        "inlineStyleRanges": []
+                      }
+                    ],
+                    "entityMap": {}
+                  }
+                },
+                {
+                  "id": "bhldq",
+                  "width": "narrow",
+                  "alignment": "left",
+                  "startTime": 4.11,
+                  "rawContentState": {
+                    "blocks": [
+                      {
+                        "key": "43k92",
+                        "data": {},
+                        "text": "許多粉絲在搶票失敗後，會到臉書社團刷貼文，找尋市面上流通的轉讓票、黃牛票，爭取看到心儀演唱會的最後機會。",
+                        "type": "unstyled",
+                        "depth": 0,
+                        "entityRanges": [],
+                        "inlineStyleRanges": []
+                      }
+                    ],
+                    "entityMap": {}
+                  }
+                }
+              ],
+              "darkMode": false,
+              "secondsPer100vh": 2.5,
+              "uuid": "5609ad24-8057-4a07-af30-0688f9eee7c5"
+            };
+            window[namespace][pkg].push(data);
+          }
+        }
+      })()
+    </script>
+    <div id="5609ad24-8057-4a07-af30-0688f9eee7c5"></div>
+    <script type="text/javascript" defer crossorigin src="https://cdn.jsdelivr.net/npm/@story-telling-reporter/react-embed-code-generator@2.2.13/dist/scrollable-video.js"></script>
+  </div>
+  <!-- 彈出視窗 -->
+  <div id="popup-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:9999;">
+    <div style="background:#fff; padding:2rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align:center;">
+      <p>看到這個比原價高三倍的價格，您還想購買黃牛嗎？</p>
+      <button onclick="handleAnswer(true)">是</button>
+      <button onclick="handleAnswer(false)">否</button>
+    </div>
+  </div>
+  <script>
+    let popupShown = false;
+
+    window.addEventListener('scroll', function () {
+      const scrollBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+      if (!popupShown && scrollBottom) {
+        document.getElementById('popup-overlay').style.display = 'flex';
+        popupShown = true;
+      }
+    });
+
+    function handleAnswer(isYes) {
+      window.location.href = isYes ? 'yes.html' : 'no.html';
+    }
+  </script>
+</body>
