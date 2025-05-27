@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>選擇座位</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    .top-bar {
+      background: #EEAECA;
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    .content {
+      display: flex;
+      height: calc(100vh - 50px);
+      overflow: hidden;
+    }
+    .left {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .left img {
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      border: 1px solid #ccc;
+    }
+    .right {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    .right img {
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    /* prize.html連結樣式覆蓋，必須放在最後以確保覆蓋 */
+    a[href="prize.html"] div {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    a[href="prize.html"]:hover div,
+    a[href="prize.html"]:active div {
+      filter: brightness(1.2);
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div style="display: flex; gap: 20px;">
+      <div>首頁</div>
+      <div>節目資訊</div>
+      <div>最新消息</div>
+      <div>常見問題</div>
+      <div>訂單查詢</div>
+    </div>
+    <div>會員帳戶</div>
+  </div>
+  <!-- 頂部進度條與選單 -->
+  <div style="padding: 50px 20px 10px 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;margin-left: 170px;">
+      <div style="display: flex; justify-content: space-between; flex: 1; max-width: 1000px;">
+        <div style="text-align: center;">
+          <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #2a4fa1; color: white; display: flex; align-items: center; justify-content: center;">✓</div>
+          <div style="margin-top: 5px;">選擇區域</div>
+        </div>
+        <div style="border-top: 5px solid #ccc; flex: 1; align-self: center; margin: 0 10px;"></div>
+        <div style="text-align: center;">
+          <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #ccc;"></div>
+          <div style="margin-top: 5px;">選擇張數</div>
+        </div>
+        <div style="border-top: 5px solid #ccc; flex: 1; align-self: center; margin: 0 10px;"></div>
+        <div style="text-align: center;">
+          <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #ccc;"></div>
+          <div style="margin-top: 5px;">購票確認</div>
+        </div>
+        <div style="border-top: 5px solid #ccc; flex: 1; align-self: center; margin: 0 10px;"></div>
+        <div style="text-align: center;">
+          <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #ccc;"></div>
+          <div style="margin-top: 5px;">付款</div>
+        </div>
+        <div style="border-top: 5px solid #ccc; flex: 1; align-self: center; margin: 0 10px;"></div>
+        <div style="text-align: center;">
+          <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #ccc;"></div>
+          <div style="margin-top: 5px;">完成訂購</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px; margin-left: 450px;">
+      渣打銀行 《gummii》巡迴演唱會 - 台北
+    </div>
+  </div>
+  <div class="content">
+    <div class="left">
+      <img src="/Users/yuanhsichou/Desktop/project/gummii.png" alt="Concert Poster" />
+    </div>
+    <div class="right">
+      <div style="font-weight: bold; font-size: 16px;">請選擇選位方式</div>
+      <div style="display: flex; margin: 10px 0;">
+        <div style="background-color: #2569b0; color: white; padding: 10px 20px;">電腦配位</div>
+        <div style="background-color: #f0f0f0; padding: 10px 20px;">自行選位</div>
+      </div>
+      <hr/>
+      <!-- 5880區 -->
+      <div style="background-color: #eee; padding: 5px 10px; font-weight: bold; margin-top: 20px;">5880區</div>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>特A區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>特B區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅220區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅219區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅218區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅209區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅208區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#b2455d; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅207區 5880 <span style="color: red;">熱賣中</span></div>
+      </a>
+
+      <!-- 5380區 -->
+      <div style="background-color: #eee; padding: 5px 10px; font-weight: bold; margin-top: 20px;">5380區</div>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅220區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅219區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅218區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅217區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠215區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠214區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠213區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠212區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙209區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙208區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#c5996b; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙207區 5380 <span style="color: red;">熱賣中</span></div>
+      </a>
+
+      <!-- 4380區 -->
+      <div style="background-color: #eee; padding: 5px 10px; font-weight: bold; margin-top: 20px;">4380區</div>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅220區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅219區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅218區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>紅217區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠216區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠215區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠214區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠213區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠212區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙211區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙210區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙209區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙208區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#dfc15f; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>橙207區 4380 <span style="color: red;">熱賣中</span></div>
+      </a>
+
+      <!-- 3880區 -->
+      <div style="background-color: #eee; padding: 5px 10px; font-weight: bold; margin-top: 20px;">3880區</div>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠410區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠409區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠408區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠407區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠406區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠511區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠510區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠509區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+      <a href="prize.html" style="text-decoration: none; color: inherit;">
+        <div><span style="background-color:#678ec5; display:inline-block; width:12px; height:12px; margin-right:5px;"></span>綠508區 3880 <span style="color: red;">熱賣中</span></div>
+      </a>
+    </div>
+  </div>
+</body>
+<div id="countdown" style="position: fixed; bottom: 20px; right: 20px; background-color: #ffc; padding: 10px; border: 1px solid #ccc; z-index: 1000; font-weight: bold;"></div>
+
+<script>
+  // 初始化倒數時間（僅在未設定過時才設定）
+  if (!sessionStorage.getItem('startTime')) {
+    sessionStorage.setItem('startTime', Date.now().toString());
+  }
+
+  const countdownElement = document.getElementById("countdown");
+
+  const interval = setInterval(() => {
+    const startTime = parseInt(sessionStorage.getItem('startTime'), 10);
+    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    const remaining = 10 - elapsed;
+
+    if (countdownElement) {
+      countdownElement.textContent = `剩餘時間：${remaining} 秒`;
+    }
+
+    if (remaining <= 0) {
+      clearInterval(interval);
+      sessionStorage.removeItem('startTime');  // 清除時間資料
+      alert("太慢了");
+      window.location.href = "loading.html#timeout";
+    }
+  }, 1000);
+</script>
+</html>
