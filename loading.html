@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>載入中...</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: white;
+    }
+
+    .top-bar {
+      background: #EEAECA;
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .section {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 60px);
+    }
+
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #cce0f5;
+      border-top: 6px solid #2268b3;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .notice-text {
+      font-size: 20px;
+      color: #000;
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 40px;
+    }
+
+    .btn {
+      padding: 20px 60px;
+      font-size: 18px;
+      background-color: rgb(224, 217, 217);
+      border: 1px solid #000;  /* 新增黑色邊框，粗度剛好 */
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:active {
+      background-color: #fafafa;
+      color: #666;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #loading {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div style="display: flex; gap: 20px;">
+      <div>首頁</div>
+      <div>節目資訊</div>
+      <div>最新消息</div>
+      <div>常見問題</div>
+      <div>訂單查詢</div>
+    </div>
+    <div>會員帳戶</div>
+  </div>
+
+  <div id="loading" class="section">
+    <div class="loader"></div>
+    <div class="loading-text">請稍候，並避免進行任何操作...</div>
+  </div>
+
+  <div id="scalper" class="section">
+    <div class="notice-text">
+      您選擇的區域已完售<br />
+      目前臉書等網站上仍有黃牛票，您是否要購買？
+    </div>
+    <div class="btn-group">
+      <button class="btn" onclick="goToData()">是</button>
+      <button class="btn" onclick="goToData()">否</button>
+    </div>
+  </div>
+
+  <script>
+    // 顯示提示畫面（60秒後）
+    setTimeout(function () {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('scalper').style.display = 'flex';
+    }, 10000);
+
+    function goToData() {
+      window.location.href = "data.html";
+    }
+  </script>
+</body>
+</html>
