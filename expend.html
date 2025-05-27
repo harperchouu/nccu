@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>選擇購買品項</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .money {
+      text-align: right;
+      padding: 20px;
+      font-size: 18px;
+    }
+    .money::before {
+      content: '💰：';
+    }
+    .title {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 60px;
+      margin-bottom: 70px;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .option {
+      width: 150px;
+      height: 100px;
+      background: #ffdeea;
+      background: radial-gradient(circle, rgba(255, 222, 234, 1) 100%, rgba(148, 187, 233, 1) 100%);;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid black;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .option:hover,
+    .option:active {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="money">22000元</div>
+  <div class="title">請選擇您要購買的品項</div>
+  <div class="grid">
+    <a href="card.html" class="option">小卡<br>400元</a>
+    <a href="buble.html" class="option">泡泡續約<br>月費120元</a>
+    <a href="lamp.html" class="option">手燈<br>1600元</a>
+    <a href="poster.html" class="option">手幅<br>500元</a>
+    <a href="sign.html" class="option">親簽專輯<br>1萬元</a>
+    <a href="none.html" class="option">都不買</a>
+  </div>
+</body>
+</html>
